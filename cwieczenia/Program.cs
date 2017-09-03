@@ -26,7 +26,6 @@ namespace cwieczenia
             Console.WriteLine("Suma dwóch losowych liczb z zakresu: " + firstNumber +"-" 
                               + secondNumber + " to: " + Randomize(firstNumber, secondNumber));
             Console.ReadLine();
-
         }
     }
 }
