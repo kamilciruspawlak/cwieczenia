@@ -10,6 +10,7 @@ namespace cwieczenia
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
