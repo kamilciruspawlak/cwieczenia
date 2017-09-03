@@ -8,19 +8,23 @@ namespace cwieczenia
 {
     class Program
     {
+        static int Randomize(int firstNumber, int secondNumber)
+        {
+            Random rnd = new Random();
+            int firstRnd = rnd.Next(firstNumber, secondNumber);
+            int secondRnd = rnd.Next(firstNumber, secondNumber);
+            int sum = firstRnd + secondRnd;
+            return sum;
+        }
         static void Main(string[] args)
         {
             Console.WriteLine("Podaj początek zakresu losowanie liczb: ");
             int firstNumber = int.Parse(Console.ReadLine());
             Console.WriteLine("Podaj koniec zakresu losowania liczb: ");
             int secondNumber = int.Parse(Console.ReadLine());
-
-            Random rnd = new Random();
-            int firstRnd = rnd.Next(firstNumber, secondNumber);
-            int secondRnd = rnd.Next(firstNumber, secondNumber);
-            int sum = firstRnd + secondRnd;
-            Console.WriteLine("Pierwsza wylosowana liczba to: " + firstRnd + ", druga wylosowana liczba: " 
-                + secondRnd + ". Suma tych liczb to: " + sum);
+            
+            Console.WriteLine("Suma dwóch losowych liczb z zakresu: " + firstNumber +"-" 
+                              + secondNumber + " to: " + Randomize(firstNumber, secondNumber));
             Console.ReadLine();
 
         }
